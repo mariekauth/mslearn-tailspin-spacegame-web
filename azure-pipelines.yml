@@ -54,9 +54,13 @@ steps:
     arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
 
+#To do: 
+#This does NOT run when condition = dev_forms, also lacks other scans : DO NOT MERGE
+ #Add condition on when this should run, also make decision on what tool to use for securing Open Source Software.
+ #This tool does a security scan for vulnerabilies, and a license scan to ensure it meets with company guidelines.
 - task: WhiteSource Bolt@20
   displayName: 'Run WhiteSource Bolt'
-  condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'dev_forms'))
+#  condition: and(succeeded(), eq(variables['System.PullRequest.TargetBranch'], 'dev_forms'))
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
