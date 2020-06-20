@@ -9,7 +9,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Tailspin.SpaceGame.Web.Models" Version="1.0.0-CI-20200620-035310" />
+    <PackageReference Include="Tailspin.SpaceGame.Web.Models" Version="2.0.0-CI-20200620-045310" />
   </ItemGroup>
 
   <ItemGroup>
